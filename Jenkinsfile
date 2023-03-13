@@ -26,5 +26,9 @@ pipeline {
 			{
 				emailext body: 'Your pipeline script aborted !!', subject: 'Pipeline script is failed', to: 'saransalem30@gmail.com'			
 			}
+			always
+			{
+				emailext body: 'Your pipeline script aborted !!', subject: 'Pipeline script is failed', to: 'saransalem30@gmail.com'			
+			}
 		}
 }
