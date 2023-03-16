@@ -21,6 +21,14 @@ pipeline {
             }
         }
 	    
+	    
+        stage('Artifacts') {
+            steps {
+                echo 'Artifacts App'
+		archiveArtifacts artifacts: '**/target/*.jar', followSymlinks: false
+            }
+        }
+	    
         stage('Deploy') {
             steps {
                 echo 'Deploy App'
